@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from './components/NavBar/Nav';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import AllRoutes from './components/NavBar/AllRoutes';
 import Home from './components/Home/Home';
 import About from './components/About/About';
@@ -18,7 +18,7 @@ const App = () => {
     <div>
       <WishlistProvider>
         <CartProvider>
-          <BrowserRouter>
+          <Router basename="/Aytor-E-commerce">
             <Nav/>
             <Routes>
               {/* {
@@ -39,7 +39,7 @@ const App = () => {
               <Route path="/shop/wishlist" element={<Wishlist />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </BrowserRouter>
+          </Router >
         </CartProvider>
       </WishlistProvider>
     </div>
